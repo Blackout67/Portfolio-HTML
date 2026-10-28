@@ -1,88 +1,313 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Joel Yapi — Développeur web & designer</title>
+<meta name="description" content="Portfolio de Joel Yapi, développeur web et designer graphique à Abidjan : sites, applications de gestion, outils métier, identités visuelles et vidéos.">
+<meta property="og:title" content="Joel Yapi — Développeur web & designer">
+<meta property="og:description" content="Sites, applications, outils métier, identités visuelles et vidéos. Abidjan, Côte d'Ivoire.">
+<meta property="og:image" content="assets/img/abriko-site.webp">
+<meta name="theme-color" content="#f2eee6">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+  // Applique le thème avant le premier rendu pour éviter un flash de couleur.
+  try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
 </head>
 <body>
 
-    <!-- En-tête du portfolio -->
-    <header>
-        <h1>Yapi Mony Joel Marcel</h1>
-        <p> 
-            <a href="index.html">Accueil</a> | 
-            <a href="Projet.html">Projets</a> | 
-            <a href="Expériences.html">Expériences</a> | 
-            <a href="Apropos.html">À propos</a> | 
-            <a href="Contact.html">Contact</a> 
-        </p>
+<a class="skip" href="#projets">Aller aux projets</a>
+
+<header class="top">
+  <a class="brand" href="#accueil" aria-label="Accueil">
+    <img src="assets/img/avatar.webp" alt="" width="36" height="36">
+    <span>Joel Yapi</span>
+  </a>
+  <nav aria-label="Navigation principale">
+    <a href="#projets">Projets</a>
+    <a href="#methode">Méthode</a>
+    <a href="#parcours">Parcours</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="theme" type="button" aria-label="Changer de thème" title="Clair / sombre">
+    <span aria-hidden="true"></span>
+  </button>
+</header>
+
+<main>
+
+<!-- ============ ACCUEIL ============ -->
+<section id="accueil" class="hero">
+  <div class="hero-text">
+    <p class="kicker mono">Abidjan · Côte d'Ivoire</p>
+    <h1>Je fabrique des <em>outils</em>, des <em>sites</em> et des <em>images</em> qui servent vraiment.</h1>
+    <p class="lead">Développeur web et designer graphique. Je construis pour des commerces réels : un showroom de peinture, des artisans, des amis qui lancent leur projet. De la spécification jusqu'à la mise en ligne, avec l'IA comme co-pilote.</p>
+    <div class="cta">
+      <a class="btn" href="#projets">Voir les projets</a>
+      <a class="btn ghost" href="#contact">Me contacter</a>
+    </div>
+  </div>
+
+  <!-- Le nuancier : une lame par projet, chacune mène à sa fiche -->
+  <div class="fan" aria-label="Nuancier des projets">
+    <a href="#p-abriko-site"  style="--c:#1d5c68;--i:0"><span>01 Site ABRIKO</span></a>
+    <a href="#p-abriko-app"   style="--c:#c2410c;--i:1"><span>02 App ABRIKO</span></a>
+    <a href="#p-bot"          style="--c:#3f6b3a;--i:2"><span>03 Bot & outils</span></a>
+    <a href="#p-max"          style="--c:#1f7a68;--i:3"><span>04 Système Max</span></a>
+    <a href="#p-auraramp"     style="--c:#7a2fd0;--i:5"><span>06 AuraRamp</span></a>
+    <a href="#p-testeur"      style="--c:#c99a6a;--i:6"><span>07 Testeur d'habits</span></a>
+    <a href="#p-oeuf"         style="--c:#e2383d;--i:7"><span>08 L'Œuf</span></a>
+    <a href="#p-veilleur"     style="--c:#c8962e;--i:8"><span>09 Le Veilleur</span></a>
+  </div>
+</section>
+
+<section class="band" aria-label="En bref">
+  <dl>
+    <div><dt>9</dt><dd>projets menés en 2026</dd></div>
+    <div><dt>4</dt><dd>domaines : web, apps, design, vidéo</dd></div>
+    <div><dt>1</dt><dd>licence en génie logiciel</dd></div>
+    <div><dt>0</dt><dd>secret dans un dépôt public</dd></div>
+  </dl>
+</section>
+
+<!-- ============ PROJETS ============ -->
+<section id="projets" class="section">
+  <header class="section-head">
+    <p class="mono kicker">Le nuancier</p>
+    <h2>Projets</h2>
+    <p class="muted">Chaque projet est une teinte. Les dépôts de code des clients restent privés ; je montre ici le résultat et la démarche.</p>
+  </header>
+
+  <div class="filters" role="group" aria-label="Filtrer les projets">
+    <button type="button" class="chip" data-filter="tout" aria-pressed="true">Tout</button>
+    <button type="button" class="chip" data-filter="web" aria-pressed="false">Sites web</button>
+    <button type="button" class="chip" data-filter="app" aria-pressed="false">Applications</button>
+    <button type="button" class="chip" data-filter="outil" aria-pressed="false">Outils métier</button>
+    <button type="button" class="chip" data-filter="design" aria-pressed="false">Design</button>
+    <button type="button" class="chip" data-filter="video" aria-pressed="false">Vidéo</button>
+  </div>
+  <p class="count mono" aria-live="polite"></p>
+
+  <div class="grid">
+
+    <article class="card wide" id="p-abriko-site" data-cat="web design" style="--c:#1d5c68">
+      <div class="swatch"><span class="mono">N°01</span><span class="mono">Bleu Angré</span></div>
+      <figure class="shot"><img src="assets/img/abriko-site.webp" alt="Page d'accueil du site ABRIKO : « Construire, protéger, transformer. »" loading="lazy" width="1200" height="717"></figure>
+      <div class="body">
+        <p class="meta mono">Site vitrine · 2026</p>
+        <h3>ABRIKO — Travaux Bâtiment</h3>
+        <p>Site du premier showroom franchisé Seigneurie® de Côte d'Ivoire. Idée centrale : <strong>la couleur est une matière qu'on fabrique ici</strong>. Le visiteur choisit une teinte du nuancier et elle repeint tout le site en direct ; les contrastes du texte sont recalculés à chaque changement pour rester lisibles, du blanc cassé au bleu nuit.</p>
+        <p>Troisième direction artistique après deux versions refusées « correctes mais sans vie » : on a ajouté matière, relief et mouvement.</p>
+        <ul class="tags"><li>HTML / CSS / JS</li><li>Design system</li><li>SEO</li><li>Vercel</li></ul>
+        <p class="links"><a href="https://abriko-site.vercel.app" target="_blank" rel="noopener">Voir le site en ligne ↗</a></p>
+      </div>
+    </article>
+
+    <article class="card" id="p-abriko-app" data-cat="app outil" style="--c:#c2410c">
+      <div class="swatch"><span class="mono">N°02</span><span class="mono">Orange chantier</span></div>
+      <div class="art art-app" aria-hidden="true">
+        <div class="phone"><i></i><i></i><i></i><b></b></div>
+        <code>RLS · offline · PWA</code>
+      </div>
+      <div class="body">
+        <p class="meta mono">Application · 2026</p>
+        <h3>App de gestion du showroom</h3>
+        <p>Application installable sur mobile et PC pour la caisse, les ventes, le stock et les rapports. Elle fonctionne <strong>hors connexion</strong> et les droits de chaque rôle sont appliqués dans la base elle-même, pas seulement dans l'interface.</p>
+        <p>Un mode démo tourne à 100 % dans le navigateur avec des données fictives. Tests unitaires, tests SQL des droits, parcours de bout en bout automatisés.</p>
+        <ul class="tags"><li>TypeScript</li><li>Vite</li><li>Supabase</li><li>PostgreSQL RLS</li><li>Vitest</li><li>Playwright</li></ul>
+        <p class="links"><span class="private mono">Code privé — client</span></p>
+      </div>
+    </article>
+
+    <article class="card" id="p-bot" data-cat="outil" style="--c:#3f6b3a">
+      <div class="swatch"><span class="mono">N°03</span><span class="mono">Vert atelier</span></div>
+      <div class="art art-bot" aria-hidden="true">
+        <div class="chat">
+          <p class="me">/devis</p>
+          <p>Client ? Produits ? Quantités ?</p>
+          <p class="me">…</p>
+          <p class="doc">DEVIS.pdf ✓</p>
+        </div>
+      </div>
+      <div class="body">
+        <p class="meta mono">Automatisation · 2026</p>
+        <h3>Bot Telegram & outils métier</h3>
+        <p>Un assistant Telegram pour le showroom : il prépare factures, devis et bons de commande aux normes de l'entreprise, tient le journal de caisse et suit le stock. Autour, des scripts qui font l'inventaire de milliers de fichiers et récupèrent les données d'un ancien logiciel de gestion.</p>
+        <p>Le code est publié par <strong>liste blanche</strong> : seuls les fichiers explicitement autorisés quittent la machine, jamais les données clients.</p>
+        <ul class="tags"><li>Python</li><li>Telegram API</li><li>Génération PDF / Word</li><li>Excel</li></ul>
+        <p class="links"><span class="private mono">Code privé — client</span></p>
+      </div>
+    </article>
+
+    <article class="card" id="p-max" data-cat="app" style="--c:#1f7a68">
+      <div class="swatch"><span class="mono">N°04</span><span class="mono">Vert pilotage</span></div>
+      <figure class="shot"><img src="assets/img/systeme-max.webp" alt="Tableau de bord de Système Max : indicateurs du showroom et objectifs personnels" loading="lazy" width="1200" height="750"></figure>
+      <div class="body">
+        <p class="meta mono">Application · 2026</p>
+        <h3>Système Max</h3>
+        <p>Un seul tableau de bord pour deux mondes qui ne doivent pas se mélanger : le comptoir du showroom (caisse, relances, devis, stock) et le suivi personnel (habitudes, objectifs chiffrés, planning).</p>
+        <p>Projet mené <strong>spécification d'abord</strong> : vision produit, user stories, modèle de données et charte UX écrits avant la première ligne de code, puis confiés à un agent de code.</p>
+        <ul class="tags"><li>React</li><li>TypeScript</li><li>Vite</li><li>IndexedDB</li><li>PRD</li></ul>
+      </div>
+    </article>
+
+
+    <article class="card" id="p-auraramp" data-cat="web" style="--c:#7a2fd0">
+      <div class="swatch"><span class="mono">N°06</span><span class="mono">Violet Web3</span></div>
+      <figure class="shot"><img src="assets/img/auraramp.webp" alt="Interface d'AuraRamp : convertisseur euros vers crypto et moyens de paiement" loading="lazy" width="1200" height="750"></figure>
+      <div class="body">
+        <p class="meta mono">Prototype web · 2026</p>
+        <h3>AuraRamp</h3>
+        <p>Concept de passerelle entre l'argent bancaire et les cryptomonnaies : bandeau de cours en continu, calculateur de conversion, comparaison des frais par moyen de paiement et choix du fournisseur le moins cher.</p>
+        <p>Prototype d'interface : aucune transaction réelle n'est effectuée.</p>
+        <ul class="tags"><li>JavaScript</li><li>Vite</li><li>Web3</li><li>UI fintech</li></ul>
+      </div>
+    </article>
+
+    <article class="card" id="p-testeur" data-cat="app web" style="--c:#c99a6a">
+      <div class="swatch"><span class="mono">N°07</span><span class="mono">Sable</span></div>
+      <div class="art art-testeur" aria-hidden="true">
+        <svg class="hanger" viewBox="0 0 120 70"><path d="M60 26v-6a8 8 0 1 0-8-8M60 26 8 60h104z"/></svg>
+        <div class="link mono">tiktok.com/… → essayer</div>
+      </div>
+      <div class="body">
+        <p class="meta mono">Application web · 2026</p>
+        <h3>Testeur d'habits</h3>
+        <p>Tu vois une tenue sur TikTok ou Pinterest, tu colles le lien, tu l'essaies sur toi en 30 secondes. Application installable sur le téléphone, avec une fonction serveur qui ne va chercher les images que sur une <strong>liste de sites autorisés</strong>.</p>
+        <ul class="tags"><li>PWA</li><li>Service worker</li><li>Fonctions serverless</li><li>Vercel</li></ul>
+      </div>
+    </article>
+
+    <article class="card" id="p-oeuf" data-cat="video" style="--c:#e2383d">
+      <div class="swatch"><span class="mono">N°08</span><span class="mono">Rouge fissure</span></div>
+      <figure class="shot tall dark"><img src="assets/img/oeuf.webp" alt="Image de la vidéo L'Œuf : un œuf lumineux fissuré, « 100 coups »" loading="lazy" width="700" height="843"></figure>
+      <div class="body">
+        <p class="meta mono">Motion design · 2026</p>
+        <h3>L'Œuf — histoire de vie</h3>
+        <p>« Un œuf peut se casser de deux façons. » Vidéo verticale de près de trois minutes en cinq chapitres, déclinée en cinq reels. Silhouettes en traits lumineux, accents rouges, voix off posée.</p>
+        <p>Écrite, mise en voix et <strong>animée entièrement en code</strong> : le script devient des scènes, les scènes deviennent des images, rendues automatiquement.</p>
+        <ul class="tags"><li>Écriture</li><li>Motion design</li><li>Python</li><li>Synthèse vocale</li><li>FFmpeg</li></ul>
+      </div>
+    </article>
+
+    <article class="card" id="p-veilleur" data-cat="video design" style="--c:#c8962e">
+      <div class="swatch"><span class="mono">N°09</span><span class="mono">Ocre Sankofa</span></div>
+      <figure class="shot tall night"><img src="assets/img/veilleur.webp" alt="Logo de la chaîne Le Veilleur : l'oiseau Sankofa ocre sur fond nuit" loading="lazy" width="700" height="700"></figure>
+      <div class="body">
+        <p class="meta mono">Chaîne vidéo · identité · 2026</p>
+        <h3>Le Veilleur</h3>
+        <p>Une chaîne qui interroge ce qu'on nous a appris à croire, vu depuis l'Afrique et parlé à toute la francophonie. Le logo reprend le symbole adinkra <strong>Sankofa</strong> : « retourne chercher ce que tu as laissé derrière toi ».</p>
+        <p>Ligne éditoriale, séries, charte visuelle et une chaîne de production en sept étapes par vidéo, de l'idée au montage.</p>
+        <ul class="tags"><li>Branding</li><li>Ligne éditoriale</li><li>Scénario</li><li>Montage</li></ul>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ MÉTHODE ============ -->
+<section id="methode" class="section">
+  <header class="section-head">
+    <p class="mono kicker">Comment je travaille</p>
+    <h2>Méthode</h2>
+  </header>
+  <ol class="steps">
+    <li>
+      <h3>Comprendre le terrain</h3>
+      <p>Avant d'écrire du code, je fais l'inventaire de ce qui existe : fichiers, classeurs, habitudes du comptoir. Un outil qui ignore la réalité du terrain ne sera pas utilisé.</p>
+    </li>
+    <li>
+      <h3>Écrire la spécification</h3>
+      <p>Vision, utilisateurs, user stories, modèle de données, règles d'interface. Un document clair vaut mieux que dix allers-retours.</p>
+    </li>
+    <li>
+      <h3>Construire par petits lots</h3>
+      <p>Chaque lot est livrable seul, vérifié puis enregistré dans git. Si quelque chose casse, on sait exactement où revenir.</p>
+    </li>
+    <li>
+      <h3>Tester et sécuriser</h3>
+      <p>Tests automatisés, droits appliqués dans la base, aucun mot de passe ni clé dans le code publié. La sécurité n'est pas une option qu'on désactive pour aller plus vite.</p>
+    </li>
+    <li>
+      <h3>L'IA comme co-pilote</h3>
+      <p>Je travaille avec des agents de code (Claude Code, Antigravity, Cursor) : je décide, je relis, je vérifie. L'agent accélère, il ne remplace pas le jugement.</p>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ COMPÉTENCES & PARCOURS ============ -->
+<section id="parcours" class="section split">
+  <div>
+    <header class="section-head">
+      <p class="mono kicker">Boîte à outils</p>
+      <h2>Compétences</h2>
     </header>
+    <div class="skills">
+      <div>
+        <h3 class="mono">Développement</h3>
+        <p>HTML, CSS, JavaScript, TypeScript, React, Vite, Python, SQL / PostgreSQL, Supabase, PWA, tests (Vitest, Playwright), git</p>
+      </div>
+      <div>
+        <h3 class="mono">Design</h3>
+        <p>Identité visuelle, logo, charte graphique, design system, maquettes UI, documents d'entreprise, Figma</p>
+      </div>
+      <div>
+        <h3 class="mono">Vidéo</h3>
+        <p>Écriture de script, montage, motion design en code, voix off, pilotage de drone et prise de vue aérienne</p>
+      </div>
+      <div>
+        <h3 class="mono">Mise en ligne</h3>
+        <p>Vercel, GitHub, nom de domaine, référencement (SEO), automatisation de documents</p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <header class="section-head">
+      <p class="mono kicker">Jusqu'ici</p>
+      <h2>Parcours</h2>
+    </header>
+    <ol class="timeline">
+      <li>
+        <p class="mono meta">2026</p>
+        <h3>Développeur & designer indépendant</h3>
+        <p>Outils sur mesure, sites et identités pour un showroom de peinture et revêtements, des artisans et des projets d'amis.</p>
+      </li>
+      <li>
+        <p class="mono meta">Avant</p>
+        <h3>Responsable communication</h3>
+        <p>Dans une entreprise événementielle : amélioration de la communication et d'une gestion plus efficace de l'entreprise. Design graphique et réalisation vidéo.</p>
+      </li>
+      <li>
+        <p class="mono meta">Formation</p>
+        <h3>Licence en informatique</h3>
+        <p>Développeur d'applications, option génie logiciel : développement web, gestion de projet, modélisation de données, intelligence artificielle.</p>
+      </li>
+    </ol>
+  </div>
+</section>
 
-    <!-- Section titre du poste -->
-    <h2>
-        Developppeur Web et Designer Graphique
-    </h2>
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section contact">
+  <p class="mono kicker">Un projet, une idée, une teinte à fabriquer ?</p>
+  <h2>Parlons-en.</h2>
+  <div class="cta">
+    <a class="btn" href="https://www.linkedin.com/in/yapi-mony-joel-marcel" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a class="btn ghost" href="https://github.com/Blackout67" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</section>
 
-    <!-- Section de présentation (Sous forme de tableau) --> 
-     <table border="1" width="100%">
-        <tr>
-            <td>
-                <h3>Savoir faire</h3>
-                <ul>
-                    <li>Creation de site web</li>
-                    <li>Design graphique</li>
-                    <li>Réalisation et montage video</li>
-                    <li>Service de drone pilotage et caption d'image drone</li>
-                </ul>
-            </td>
+</main>
 
-            <td>
-                <h3>Réalisation professionnel</h3>
-                    <p>Responsable communication dans une entreprise evenementielle <br>
-                    A aider a l’amélioration de la communication de l'entreprise et aussi a la gestion plus efficace de l'entreprise<br>
-                    <a href="https://www.linkedin.com/in/yapi-mony-joel-marcel" target="_blank">Vous pouvez consulter mon lien LinkedIn en cliquant sur ce lien</a>
-                    </p>
-                <h3>Graphique et vidéas professionnel</h3>
-                    <p>
-                        A participer activement a la réalisation de plusieurs projet de design graphique et de réalisation de vidéo<br>
-                    </p>
-            </td>
+<footer class="foot">
+  <p class="mono">© 2026 Joel Yapi · Abidjan</p>
+  <p class="mono muted">Site fait main, sans framework. <a href="https://github.com/Blackout67/Portfolio-HTML">Code source</a></p>
+</footer>
 
-            <td>
-                <h3>Compétences académique</h3>
-                <p>Licence en Informatique - Développeur d'application option génie logiciel</p>
-                <p>Spécialisation</p> 
-
-                <ul>
-                    <li>Conception et développement d'applications web</li>
-                    <li>Gestion de projet informatique</li>
-                    <li>Analyse et modélisation de données</li>
-                    <li>Intelligence artificielle et apprentissage automatique</li>
-                </ul>
-            </td>
-        </tr>
-     </table>
-
-     <h3>Bla bla</h3>
-     <table border="1" width="100%">
-        <tr>
-            <td>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis non tempore consectetur, praesentium culpa et, quaerat cumque in nihil perferendis officiis pariatur exercitationem earum ut voluptatum eos reprehenderit hic iste? 
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ullam incidunt fuga ipsum totam impedit ex ratione cupiditate, tempore, corrupti dolorum pariatur illo autem similique saepe officia hic, laborum voluptas?
-            </td>
-
-            <td>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus adipisci vel expedita. Tempora, pariatur! Amet sint facere corporis culpa molestiae ullam fugiat dolorum, labore vero dolor placeat accusamus quia sunt.
-            </td>
-
-            <td>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, soluta libero? Voluptates dolore eum non explicabo maxime libero consequatur autem, doloremque, reiciendis odit esse veritatis sunt rerum quasi illo sint. 
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, nobis minus iusto dicta architecto illum, molestiae autem dolores fugiat voluptate similique! Est numquam tenetur voluptatibus sit ipsum dicta voluptate quod.
-            </td>
-        </tr>
-     </table>
+<script src="script.js"></script>
 </body>
 </html>
