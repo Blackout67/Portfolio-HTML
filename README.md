@@ -2,14 +2,14 @@
 
 Développeur web et designer graphique, Abidjan.
 
-Le site présente neuf projets sous forme de **nuancier** : chaque projet est une teinte numérotée, et sa couleur habille sa carte, ses étiquettes et sa lame dans l'éventail de l'accueil.
+Une page unique, fond blanc et accent rouge : accueil avec photo, services, compétences, à propos et parcours, neuf projets avec fiche détaillée, méthode et contact (WhatsApp, e-mail, formulaire qui prépare le message).
 
 ## Contenu
 
-- `index.html` : la page unique (accueil, projets, méthode, parcours, contact).
-- `style.css` : thème clair et sombre, nuancier, mise en page responsive.
-- `script.js` : bascule du thème, filtre des projets, apparition au défilement.
-- `assets/` : favicon et captures en WebP.
+- `index.html` : la page unique. Chaque projet a sa fiche détaillée dans un bloc `.detail` caché.
+- `style.css` : mise en page responsive (ordinateur, tablette, téléphone).
+- `script.js` : coordonnées (`CONTACT` en haut du fichier), menu mobile, filtre et fiches des projets, apparitions au défilement.
+- `assets/` : favicon, photo, captures en WebP et CV en PDF.
 
 Aucun framework, aucune étape de build : ouvrir `index.html` suffit.
 

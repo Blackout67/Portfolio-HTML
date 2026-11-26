@@ -3,40 +3,56 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Joel Yapi — Développeur web & designer</title>
-<meta name="description" content="Portfolio de Joel Yapi, développeur web et designer graphique à Abidjan : sites, applications de gestion, outils métier, identités visuelles et vidéos.">
+<title>Joel Yapi — Développeur web & designer à Abidjan</title>
+<meta name="description" content="Joel Yapi, développeur web et designer graphique à Abidjan : sites vitrines, applications de gestion, automatisation, identités visuelles, vidéo et prise de vue par drone.">
 <meta property="og:title" content="Joel Yapi — Développeur web & designer">
 <meta property="og:description" content="Sites, applications, outils métier, identités visuelles et vidéos. Abidjan, Côte d'Ivoire.">
 <meta property="og:image" content="assets/img/abriko-site.webp">
-<meta name="theme-color" content="#f2eee6">
+<meta name="theme-color" content="#ffffff">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<script>
-  // Applique le thème avant le premier rendu pour éviter un flash de couleur.
-  try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
-</script>
 </head>
 <body>
+
+<!-- Icônes réutilisées partout via <use href="#i-…"> -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-7M12 13a3 3 0 0 1 6 0v4"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+  <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m22 8-6 4 6 4V8z"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+</svg>
 
 <a class="skip" href="#projets">Aller aux projets</a>
 
 <header class="top">
-  <a class="brand" href="#accueil" aria-label="Accueil">
-    <img src="assets/img/avatar.webp" alt="" width="36" height="36">
-    <span>Joel Yapi</span>
+  <a class="brand" href="#accueil" aria-label="Joel Yapi, accueil">
+    <span class="logo" aria-hidden="true">J<b>Y</b></span>
+    <span class="brand-text"><strong>Joel Yapi</strong><small>Développeur & designer</small></span>
   </a>
-  <nav aria-label="Navigation principale">
+  <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+  <nav id="menu" aria-label="Navigation principale">
+    <a href="#accueil">Accueil</a>
+    <a href="#services">Services</a>
     <a href="#projets">Projets</a>
-    <a href="#methode">Méthode</a>
-    <a href="#parcours">Parcours</a>
+    <a href="#apropos">À propos</a>
     <a href="#contact">Contact</a>
   </nav>
-  <button class="theme" type="button" aria-label="Changer de thème" title="Clair / sombre">
-    <span aria-hidden="true"></span>
-  </button>
+  <a class="btn btn-sm" href="assets/cv-joel-yapi.pdf" download data-cv>
+    Mon CV <svg class="i"><use href="#i-download"/></svg>
+  </a>
 </header>
 
 <main>
@@ -44,269 +60,423 @@
 <!-- ============ ACCUEIL ============ -->
 <section id="accueil" class="hero">
   <div class="hero-text">
-    <p class="kicker mono">Abidjan · Côte d'Ivoire</p>
-    <h1>Je fabrique des <em>outils</em>, des <em>sites</em> et des <em>images</em> qui servent vraiment.</h1>
-    <p class="lead">Développeur web et designer graphique. Je construis pour des commerces réels : un showroom de peinture, des artisans, des amis qui lancent leur projet. De la spécification jusqu'à la mise en ligne, avec l'IA comme co-pilote.</p>
+    <p class="eyebrow">Bonjour, je suis</p>
+    <h1>Joel <span class="red">Yapi</span></h1>
+    <p class="role">Développeur web & designer</p>
+    <p class="lead">Basé à Abidjan, je fabrique des sites, des applications et des images pour des commerces réels : un showroom de peinture, des artisans, des entrepreneurs qui lancent leur projet. De l'idée jusqu'à la mise en ligne.</p>
     <div class="cta">
-      <a class="btn" href="#projets">Voir les projets</a>
-      <a class="btn ghost" href="#contact">Me contacter</a>
+      <a class="btn" href="#projets">Voir mes projets <svg class="i"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="#contact">Me contacter <svg class="i"><use href="#i-mail"/></svg></a>
+    </div>
+    <ul class="socials" aria-label="Réseaux">
+      <li><a href="https://www.linkedin.com/in/yapi-mony-joel-marcel" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="i"><use href="#i-linkedin"/></svg></a></li>
+      <li><a href="https://github.com/Blackout67" target="_blank" rel="noopener" aria-label="GitHub"><svg class="i"><use href="#i-github"/></svg></a></li>
+      <li data-contact="whatsapp"><a href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="i"><use href="#i-whatsapp"/></svg></a></li>
+      <li data-contact="email"><a href="#" aria-label="E-mail"><svg class="i"><use href="#i-mail"/></svg></a></li>
+    </ul>
+  </div>
+
+  <div class="hero-visual">
+    <div class="shape" aria-hidden="true"></div>
+    <div class="dots" aria-hidden="true"></div>
+    <figure class="portrait" data-photo>
+      <img src="assets/img/joel.webp" alt="Portrait de Joel Yapi" width="560" height="700">
+      <span class="monogram" aria-hidden="true">JY</span>
+    </figure>
+    <p class="hand" aria-hidden="true">Des outils<br>qui servent<br>vraiment
+      <svg viewBox="0 0 160 20"><path d="M4 14c40-8 90-10 152-4"/></svg>
+    </p>
+    <div class="float-card" aria-hidden="true">
+      <strong>9</strong><span>projets livrés<br>en 2026</span>
     </div>
   </div>
 
-  <!-- Le nuancier : une lame par projet, chacune mène à sa fiche -->
-  <div class="fan" aria-label="Nuancier des projets">
-    <a href="#p-abriko-site"  style="--c:#1d5c68;--i:0"><span>01 Site ABRIKO</span></a>
-    <a href="#p-abriko-app"   style="--c:#c2410c;--i:1"><span>02 App ABRIKO</span></a>
-    <a href="#p-bot"          style="--c:#3f6b3a;--i:2"><span>03 Bot & outils</span></a>
-    <a href="#p-max"          style="--c:#1f7a68;--i:3"><span>04 Système Max</span></a>
-    <a href="#p-auraramp"     style="--c:#7a2fd0;--i:5"><span>06 AuraRamp</span></a>
-    <a href="#p-testeur"      style="--c:#c99a6a;--i:6"><span>07 Testeur d'habits</span></a>
-    <a href="#p-oeuf"         style="--c:#e2383d;--i:7"><span>08 L'Œuf</span></a>
-    <a href="#p-veilleur"     style="--c:#c8962e;--i:8"><span>09 Le Veilleur</span></a>
+  <a class="scroll" href="#services" aria-label="Descendre vers les services"><span>Défiler</span><svg class="i"><use href="#i-arrow"/></svg></a>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="section">
+  <div class="wrap">
+    <header class="head">
+      <p class="eyebrow">Mes services</p>
+      <h2>Ce que je peux faire pour vous</h2>
+      <p class="muted">Du site vitrine à l'outil de gestion interne, en passant par l'image de marque et la vidéo. Un seul interlocuteur, du cahier des charges à la mise en ligne.</p>
+    </header>
+    <div class="services">
+      <article class="service">
+        <span class="ico"><svg class="i"><use href="#i-monitor"/></svg></span>
+        <h3>Sites web</h3>
+        <p>Sites vitrines rapides, bien référencés sur Google et faciles à faire évoluer.</p>
+      </article>
+      <article class="service">
+        <span class="ico"><svg class="i"><use href="#i-phone"/></svg></span>
+        <h3>Applications de gestion</h3>
+        <p>Caisse, stock, ventes, rapports : installables sur mobile et PC, utilisables hors connexion.</p>
+      </article>
+      <article class="service">
+        <span class="ico"><svg class="i"><use href="#i-zap"/></svg></span>
+        <h3>Automatisation</h3>
+        <p>Bots et scripts qui préparent devis, factures et inventaires à votre place.</p>
+      </article>
+      <article class="service">
+        <span class="ico"><svg class="i"><use href="#i-pen"/></svg></span>
+        <h3>Identité visuelle</h3>
+        <p>Logo, charte graphique, documents d'entreprise et maquettes d'interface.</p>
+      </article>
+      <article class="service">
+        <span class="ico"><svg class="i"><use href="#i-video"/></svg></span>
+        <h3>Vidéo & motion design</h3>
+        <p>Écriture, voix off, montage et animation pour les réseaux sociaux et YouTube.</p>
+      </article>
+      <article class="service">
+        <span class="ico"><svg class="i"><use href="#i-camera"/></svg></span>
+        <h3>Prise de vue par drone</h3>
+        <p>Images aériennes de chantiers, de bâtiments et d'événements.</p>
+      </article>
+    </div>
   </div>
 </section>
 
-<section class="band" aria-label="En bref">
-  <dl>
-    <div><dt>9</dt><dd>projets menés en 2026</dd></div>
-    <div><dt>4</dt><dd>domaines : web, apps, design, vidéo</dd></div>
-    <div><dt>1</dt><dd>licence en génie logiciel</dd></div>
-    <div><dt>0</dt><dd>secret dans un dépôt public</dd></div>
-  </dl>
+<!-- ============ COMPÉTENCES ============ -->
+<section id="competences" class="section soft">
+  <div class="wrap split">
+    <header class="head">
+      <p class="eyebrow">Mes outils</p>
+      <h2>Des compétences qui donnent vie aux idées</h2>
+      <p class="muted">Je choisis l'outil selon le besoin, pas l'inverse. Et je travaille avec des agents de code (Claude Code, Cursor) comme co-pilotes : je décide, je relis, je vérifie.</p>
+      <a class="btn btn-ghost" href="#projets">Voir les résultats <svg class="i"><use href="#i-arrow"/></svg></a>
+    </header>
+    <div class="skills">
+      <div class="skill"><span class="tile" style="--t:#e34f26">&lt;/&gt;</span><h3>HTML & CSS</h3><p>Sites, design system</p></div>
+      <div class="skill"><span class="tile" style="--t:#d4a90c">JS</span><h3>JavaScript</h3><p>TypeScript, Vite</p></div>
+      <div class="skill"><span class="tile" style="--t:#149eca">Re</span><h3>React</h3><p>Interfaces d'apps</p></div>
+      <div class="skill"><span class="tile" style="--t:#3776ab">Py</span><h3>Python</h3><p>Bots, scripts, PDF</p></div>
+      <div class="skill"><span class="tile" style="--t:#2f9e6e">Sb</span><h3>Supabase</h3><p>PostgreSQL, droits RLS</p></div>
+      <div class="skill"><span class="tile" style="--t:#a259ff">Fg</span><h3>Figma</h3><p>Maquettes, chartes</p></div>
+      <div class="skill"><span class="tile" style="--t:#e11d2e">▶</span><h3>Motion design</h3><p>Animation en code, FFmpeg</p></div>
+      <div class="skill"><span class="tile" style="--t:#17181c">✓</span><h3>Tests & qualité</h3><p>Vitest, Playwright, git</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ À PROPOS ============ -->
+<section id="apropos" class="section">
+  <div class="wrap about">
+    <div class="about-visual">
+      <div class="shape" aria-hidden="true"></div>
+      <figure class="portrait" data-photo>
+        <img src="assets/img/joel-travail.webp" alt="Joel Yapi au travail" width="560" height="560" loading="lazy">
+        <span class="monogram" aria-hidden="true">JY</span>
+      </figure>
+      <p class="hand" aria-hidden="true">Créatif<br>& rigoureux</p>
+      <div class="float-card" aria-hidden="true">
+        <strong>HEC</strong><span>Abidjan<br>génie logiciel</span>
+      </div>
+    </div>
+    <div class="about-text">
+      <p class="eyebrow">À propos de moi</p>
+      <h2>Je suis Joel Yapi</h2>
+      <p class="role">Développeur web & designer graphique</p>
+      <p>Étudiant en licence Informatique et Développement d'Applications (option génie logiciel) à HEC Abidjan, je viens aussi du terrain : vente, communication digitale et organisation d'entreprise. Aujourd'hui je construis des outils sur mesure pour des entreprises ivoiriennes.</p>
+      <p>Ma conviction : <strong>un outil qui ignore la réalité du terrain ne sera pas utilisé</strong>. Je commence donc toujours par observer comment on travaille au comptoir, avant d'écrire la moindre ligne de code.</p>
+      <dl class="stats">
+        <div><dt>9</dt><dd>projets en 2026</dd></div>
+        <div><dt>3</dt><dd>entreprises</dd></div>
+        <div><dt>6</dt><dd>services</dd></div>
+      </dl>
+      <a class="btn" href="#contact">Travaillons ensemble <svg class="i"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <ol class="timeline">
+      <li><span class="when">2026</span><h3>Développeur & designer indépendant</h3><p>Sites, applications, automatisation et identités pour un showroom de peinture, des artisans et des porteurs de projet.</p></li>
+      <li><span class="when">Janv. – avril 2026</span><h3>Community manager · NDA NDO</h3><p>Réseaux sociaux (Facebook, LinkedIn, TikTok, Instagram), identité visuelle de la marque, contenus photo et vidéo.</p></li>
+      <li><span class="when">Août 2025 – janv. 2026</span><h3>Resp. communication & opérations · Abidjan Évènements</h3><p>Communication globale, partenariats, coordination des équipes terrain, supports visuels et organisation interne.</p></li>
+      <li><span class="when">Févr. – juin 2025</span><h3>Commercial · TOUTICI</h3><p>Vente et conseil client en boutique et en ligne, prospection, fidélisation et suivi des commandes.</p></li>
+      <li><span class="when">2024 – 2026</span><h3>Licence Informatique · HEC Abidjan</h3><p>Développement d'applications, option génie logiciel : web, gestion de projet, modélisation de données, IA.</p></li>
+    </ol>
+  </div>
 </section>
 
 <!-- ============ PROJETS ============ -->
-<section id="projets" class="section">
-  <header class="section-head">
-    <p class="mono kicker">Le nuancier</p>
-    <h2>Projets</h2>
-    <p class="muted">Chaque projet est une teinte. Les dépôts de code des clients restent privés ; je montre ici le résultat et la démarche.</p>
-  </header>
-
-  <div class="filters" role="group" aria-label="Filtrer les projets">
-    <button type="button" class="chip" data-filter="tout" aria-pressed="true">Tout</button>
-    <button type="button" class="chip" data-filter="web" aria-pressed="false">Sites web</button>
-    <button type="button" class="chip" data-filter="app" aria-pressed="false">Applications</button>
-    <button type="button" class="chip" data-filter="outil" aria-pressed="false">Outils métier</button>
-    <button type="button" class="chip" data-filter="design" aria-pressed="false">Design</button>
-    <button type="button" class="chip" data-filter="video" aria-pressed="false">Vidéo</button>
-  </div>
-  <p class="count mono" aria-live="polite"></p>
-
-  <div class="grid">
-
-    <article class="card wide" id="p-abriko-site" data-cat="web design" style="--c:#1d5c68">
-      <div class="swatch"><span class="mono">N°01</span><span class="mono">Bleu Angré</span></div>
-      <figure class="shot"><img src="assets/img/abriko-site.webp" alt="Page d'accueil du site ABRIKO : « Construire, protéger, transformer. »" loading="lazy" width="1200" height="717"></figure>
-      <div class="body">
-        <p class="meta mono">Site vitrine · 2026</p>
-        <h3>ABRIKO — Travaux Bâtiment</h3>
-        <p>Site du premier showroom franchisé Seigneurie® de Côte d'Ivoire. Idée centrale : <strong>la couleur est une matière qu'on fabrique ici</strong>. Le visiteur choisit une teinte du nuancier et elle repeint tout le site en direct ; les contrastes du texte sont recalculés à chaque changement pour rester lisibles, du blanc cassé au bleu nuit.</p>
-        <p>Troisième direction artistique après deux versions refusées « correctes mais sans vie » : on a ajouté matière, relief et mouvement.</p>
-        <ul class="tags"><li>HTML / CSS / JS</li><li>Design system</li><li>SEO</li><li>Vercel</li></ul>
-        <p class="links"><a href="https://abriko-site.vercel.app" target="_blank" rel="noopener">Voir le site en ligne ↗</a></p>
+<section id="projets" class="section soft">
+  <div class="wrap">
+    <header class="head row">
+      <div>
+        <p class="eyebrow">Mon portfolio</p>
+        <h2>Projets récents</h2>
+        <p class="muted">Cliquez sur un projet pour voir le problème, la solution et les outils. Le code des clients reste privé ; je montre le résultat et la démarche.</p>
       </div>
-    </article>
-
-    <article class="card" id="p-abriko-app" data-cat="app outil" style="--c:#c2410c">
-      <div class="swatch"><span class="mono">N°02</span><span class="mono">Orange chantier</span></div>
-      <div class="art art-app" aria-hidden="true">
-        <div class="phone"><i></i><i></i><i></i><b></b></div>
-        <code>RLS · offline · PWA</code>
+      <div class="filters" role="group" aria-label="Filtrer les projets">
+        <button type="button" class="chip" data-filter="tout" aria-pressed="true">Tout</button>
+        <button type="button" class="chip" data-filter="web" aria-pressed="false">Web</button>
+        <button type="button" class="chip" data-filter="app" aria-pressed="false">Applications</button>
+        <button type="button" class="chip" data-filter="design" aria-pressed="false">Design</button>
+        <button type="button" class="chip" data-filter="video" aria-pressed="false">Vidéo</button>
       </div>
-      <div class="body">
-        <p class="meta mono">Application · 2026</p>
-        <h3>App de gestion du showroom</h3>
-        <p>Application installable sur mobile et PC pour la caisse, les ventes, le stock et les rapports. Elle fonctionne <strong>hors connexion</strong> et les droits de chaque rôle sont appliqués dans la base elle-même, pas seulement dans l'interface.</p>
-        <p>Un mode démo tourne à 100 % dans le navigateur avec des données fictives. Tests unitaires, tests SQL des droits, parcours de bout en bout automatisés.</p>
-        <ul class="tags"><li>TypeScript</li><li>Vite</li><li>Supabase</li><li>PostgreSQL RLS</li><li>Vitest</li><li>Playwright</li></ul>
-        <p class="links"><span class="private mono">Code privé — client</span></p>
-      </div>
-    </article>
+    </header>
 
-    <article class="card" id="p-bot" data-cat="outil" style="--c:#3f6b3a">
-      <div class="swatch"><span class="mono">N°03</span><span class="mono">Vert atelier</span></div>
-      <div class="art art-bot" aria-hidden="true">
-        <div class="chat">
-          <p class="me">/devis</p>
-          <p>Client ? Produits ? Quantités ?</p>
-          <p class="me">…</p>
-          <p class="doc">DEVIS.pdf ✓</p>
+    <div class="grid">
+
+      <article class="card" id="p-abriko-site" data-cat="web design">
+        <div class="thumb"><img src="assets/img/abriko-site.webp" alt="Page d'accueil du site ABRIKO" loading="lazy" width="1200" height="717"></div>
+        <div class="card-body">
+          <div><h3>ABRIKO — Travaux Bâtiment</h3><p>Site vitrine · showroom Seigneurie®</p></div>
+          <button class="open" type="button" aria-label="Voir le projet ABRIKO"><svg class="i"><use href="#i-arrow"/></svg></button>
         </div>
-      </div>
-      <div class="body">
-        <p class="meta mono">Automatisation · 2026</p>
-        <h3>Bot Telegram & outils métier</h3>
-        <p>Un assistant Telegram pour le showroom : il prépare factures, devis et bons de commande aux normes de l'entreprise, tient le journal de caisse et suit le stock. Autour, des scripts qui font l'inventaire de milliers de fichiers et récupèrent les données d'un ancien logiciel de gestion.</p>
-        <p>Le code est publié par <strong>liste blanche</strong> : seuls les fichiers explicitement autorisés quittent la machine, jamais les données clients.</p>
-        <ul class="tags"><li>Python</li><li>Telegram API</li><li>Génération PDF / Word</li><li>Excel</li></ul>
-        <p class="links"><span class="private mono">Code privé — client</span></p>
-      </div>
-    </article>
+        <div class="detail" hidden>
+          <p class="meta">Site vitrine · 2026</p>
+          <h3>Problème</h3>
+          <p>Le premier showroom franchisé Seigneurie® de Côte d'Ivoire n'avait aucune présence en ligne, et deux premières maquettes avaient été jugées « correctes mais sans vie ».</p>
+          <h3>Solution</h3>
+          <p>Une idée centrale : <strong>la couleur est une matière qu'on fabrique ici</strong>. Le visiteur choisit une teinte du nuancier et elle repeint tout le site en direct ; les contrastes du texte sont recalculés à chaque changement pour rester lisibles, du blanc cassé au bleu nuit. Matière, relief et mouvement pour la troisième direction artistique, retenue.</p>
+          <ul class="tags"><li>HTML / CSS / JS</li><li>Design system</li><li>SEO</li><li>Vercel</li></ul>
+          <p><a class="btn" href="https://abriko-site.vercel.app" target="_blank" rel="noopener">Voir le site en ligne <svg class="i"><use href="#i-external"/></svg></a></p>
+        </div>
+      </article>
 
-    <article class="card" id="p-max" data-cat="app" style="--c:#1f7a68">
-      <div class="swatch"><span class="mono">N°04</span><span class="mono">Vert pilotage</span></div>
-      <figure class="shot"><img src="assets/img/systeme-max.webp" alt="Tableau de bord de Système Max : indicateurs du showroom et objectifs personnels" loading="lazy" width="1200" height="750"></figure>
-      <div class="body">
-        <p class="meta mono">Application · 2026</p>
-        <h3>Système Max</h3>
-        <p>Un seul tableau de bord pour deux mondes qui ne doivent pas se mélanger : le comptoir du showroom (caisse, relances, devis, stock) et le suivi personnel (habitudes, objectifs chiffrés, planning).</p>
-        <p>Projet mené <strong>spécification d'abord</strong> : vision produit, user stories, modèle de données et charte UX écrits avant la première ligne de code, puis confiés à un agent de code.</p>
-        <ul class="tags"><li>React</li><li>TypeScript</li><li>Vite</li><li>IndexedDB</li><li>PRD</li></ul>
-      </div>
-    </article>
+      <article class="card" id="p-abriko-app" data-cat="app">
+        <div class="thumb art art-app" aria-hidden="true">
+          <div class="phone"><i></i><i></i><i></i><b></b></div>
+          <div class="phone back"><i></i><i></i><b></b></div>
+        </div>
+        <div class="card-body">
+          <div><h3>App de gestion du showroom</h3><p>Caisse, stock, ventes · hors connexion</p></div>
+          <button class="open" type="button" aria-label="Voir l'app de gestion"><svg class="i"><use href="#i-arrow"/></svg></button>
+        </div>
+        <div class="detail" hidden>
+          <p class="meta">Application · 2026</p>
+          <h3>Problème</h3>
+          <p>Ventes, caisse et stock suivis à la main ou dans des classeurs dispersés, avec une connexion internet instable.</p>
+          <h3>Solution</h3>
+          <p>Une application installable sur mobile et PC qui fonctionne <strong>hors connexion</strong>. Les droits de chaque rôle (vendeur, gérant, direction) sont appliqués dans la base elle-même, pas seulement dans l'interface.</p>
+          <p>Un mode démo tourne à 100 % dans le navigateur avec des données fictives. Tests unitaires, tests SQL des droits et parcours de bout en bout automatisés.</p>
+          <ul class="tags"><li>TypeScript</li><li>Vite</li><li>Supabase</li><li>PostgreSQL RLS</li><li>Vitest</li><li>Playwright</li></ul>
+          <p class="private">Code privé — client</p>
+        </div>
+      </article>
+
+      <article class="card" id="p-bot" data-cat="app">
+        <div class="thumb art art-bot" aria-hidden="true">
+          <div class="chat">
+            <p class="me">/devis</p>
+            <p>Client ? Produits ? Quantités ?</p>
+            <p class="me">Kouassi · 4 seaux</p>
+            <p class="doc">DEVIS.pdf ✓</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <div><h3>Bot Telegram & outils métier</h3><p>Devis, factures et caisse automatisés</p></div>
+          <button class="open" type="button" aria-label="Voir le bot Telegram"><svg class="i"><use href="#i-arrow"/></svg></button>
+        </div>
+        <div class="detail" hidden>
+          <p class="meta">Automatisation · 2026</p>
+          <h3>Problème</h3>
+          <p>Chaque devis, facture ou bon de commande était refait à la main, avec des risques d'erreur de prix et de numérotation.</p>
+          <h3>Solution</h3>
+          <p>Un assistant Telegram qui prépare factures, devis et bons de commande aux normes de l'entreprise, tient le journal de caisse et suit le stock. Autour, des scripts qui inventorient des milliers de fichiers et récupèrent les données d'un ancien logiciel de gestion.</p>
+          <p>Le code est publié par <strong>liste blanche</strong> : seuls les fichiers explicitement autorisés quittent la machine, jamais les données clients.</p>
+          <ul class="tags"><li>Python</li><li>Telegram API</li><li>PDF / Word</li><li>Excel</li></ul>
+          <p class="private">Code privé — client</p>
+        </div>
+      </article>
+
+      <article class="card" id="p-max" data-cat="app">
+        <div class="thumb"><img src="assets/img/systeme-max.webp" alt="Tableau de bord de Système Max" loading="lazy" width="1200" height="750"></div>
+        <div class="card-body">
+          <div><h3>Système Max</h3><p>Tableau de bord pro & perso</p></div>
+          <button class="open" type="button" aria-label="Voir Système Max"><svg class="i"><use href="#i-arrow"/></svg></button>
+        </div>
+        <div class="detail" hidden>
+          <p class="meta">Application · 2026</p>
+          <h3>Problème</h3>
+          <p>Deux mondes qui ne doivent pas se mélanger : le comptoir du showroom (caisse, relances, devis, stock) et le suivi personnel (habitudes, objectifs, planning).</p>
+          <h3>Solution</h3>
+          <p>Un seul tableau de bord, mené <strong>spécification d'abord</strong> : vision produit, user stories, modèle de données et charte UX écrits avant la première ligne de code, puis confiés à un agent de code.</p>
+          <ul class="tags"><li>React</li><li>TypeScript</li><li>Vite</li><li>IndexedDB</li><li>PRD</li></ul>
+        </div>
+      </article>
 
 
-    <article class="card" id="p-auraramp" data-cat="web" style="--c:#7a2fd0">
-      <div class="swatch"><span class="mono">N°06</span><span class="mono">Violet Web3</span></div>
-      <figure class="shot"><img src="assets/img/auraramp.webp" alt="Interface d'AuraRamp : convertisseur euros vers crypto et moyens de paiement" loading="lazy" width="1200" height="750"></figure>
-      <div class="body">
-        <p class="meta mono">Prototype web · 2026</p>
-        <h3>AuraRamp</h3>
-        <p>Concept de passerelle entre l'argent bancaire et les cryptomonnaies : bandeau de cours en continu, calculateur de conversion, comparaison des frais par moyen de paiement et choix du fournisseur le moins cher.</p>
-        <p>Prototype d'interface : aucune transaction réelle n'est effectuée.</p>
-        <ul class="tags"><li>JavaScript</li><li>Vite</li><li>Web3</li><li>UI fintech</li></ul>
-      </div>
-    </article>
+      <article class="card" id="p-auraramp" data-cat="web">
+        <div class="thumb"><img src="assets/img/auraramp.webp" alt="Interface d'AuraRamp" loading="lazy" width="1200" height="750"></div>
+        <div class="card-body">
+          <div><h3>AuraRamp</h3><p>Prototype fintech</p></div>
+          <button class="open" type="button" aria-label="Voir AuraRamp"><svg class="i"><use href="#i-arrow"/></svg></button>
+        </div>
+        <div class="detail" hidden>
+          <p class="meta">Prototype web · 2026</p>
+          <h3>Concept</h3>
+          <p>Une passerelle entre l'argent bancaire et les cryptomonnaies : bandeau de cours en continu, calculateur de conversion, comparaison des frais par moyen de paiement et choix du fournisseur le moins cher.</p>
+          <p>Prototype d'interface : aucune transaction réelle n'est effectuée.</p>
+          <ul class="tags"><li>JavaScript</li><li>Vite</li><li>Web3</li><li>UI fintech</li></ul>
+        </div>
+      </article>
 
-    <article class="card" id="p-testeur" data-cat="app web" style="--c:#c99a6a">
-      <div class="swatch"><span class="mono">N°07</span><span class="mono">Sable</span></div>
-      <div class="art art-testeur" aria-hidden="true">
-        <svg class="hanger" viewBox="0 0 120 70"><path d="M60 26v-6a8 8 0 1 0-8-8M60 26 8 60h104z"/></svg>
-        <div class="link mono">tiktok.com/… → essayer</div>
-      </div>
-      <div class="body">
-        <p class="meta mono">Application web · 2026</p>
-        <h3>Testeur d'habits</h3>
-        <p>Tu vois une tenue sur TikTok ou Pinterest, tu colles le lien, tu l'essaies sur toi en 30 secondes. Application installable sur le téléphone, avec une fonction serveur qui ne va chercher les images que sur une <strong>liste de sites autorisés</strong>.</p>
-        <ul class="tags"><li>PWA</li><li>Service worker</li><li>Fonctions serverless</li><li>Vercel</li></ul>
-      </div>
-    </article>
+      <article class="card" id="p-testeur" data-cat="app web">
+        <div class="thumb art art-testeur" aria-hidden="true">
+          <svg class="hanger" viewBox="0 0 120 70"><path d="M60 26v-6a8 8 0 1 0-8-8M60 26 8 60h104z"/></svg>
+          <div class="link">tiktok.com/… → <b>Essayer</b></div>
+        </div>
+        <div class="card-body">
+          <div><h3>Testeur d'habits</h3><p>Essayer une tenue vue sur TikTok</p></div>
+          <button class="open" type="button" aria-label="Voir le testeur d'habits"><svg class="i"><use href="#i-arrow"/></svg></button>
+        </div>
+        <div class="detail" hidden>
+          <p class="meta">Application web · 2026</p>
+          <h3>Concept</h3>
+          <p>Tu vois une tenue sur TikTok ou Pinterest, tu colles le lien, tu l'essaies sur toi en 30 secondes.</p>
+          <h3>Réalisation</h3>
+          <p>Application installable sur le téléphone, avec une fonction serveur qui ne va chercher les images que sur une <strong>liste de sites autorisés</strong>.</p>
+          <ul class="tags"><li>PWA</li><li>Service worker</li><li>Serverless</li><li>Vercel</li></ul>
+        </div>
+      </article>
 
-    <article class="card" id="p-oeuf" data-cat="video" style="--c:#e2383d">
-      <div class="swatch"><span class="mono">N°08</span><span class="mono">Rouge fissure</span></div>
-      <figure class="shot tall dark"><img src="assets/img/oeuf.webp" alt="Image de la vidéo L'Œuf : un œuf lumineux fissuré, « 100 coups »" loading="lazy" width="700" height="843"></figure>
-      <div class="body">
-        <p class="meta mono">Motion design · 2026</p>
-        <h3>L'Œuf — histoire de vie</h3>
-        <p>« Un œuf peut se casser de deux façons. » Vidéo verticale de près de trois minutes en cinq chapitres, déclinée en cinq reels. Silhouettes en traits lumineux, accents rouges, voix off posée.</p>
-        <p>Écrite, mise en voix et <strong>animée entièrement en code</strong> : le script devient des scènes, les scènes deviennent des images, rendues automatiquement.</p>
-        <ul class="tags"><li>Écriture</li><li>Motion design</li><li>Python</li><li>Synthèse vocale</li><li>FFmpeg</li></ul>
-      </div>
-    </article>
+      <article class="card" id="p-oeuf" data-cat="video">
+        <div class="thumb fit dark"><img src="assets/img/oeuf.webp" alt="Image de la vidéo L'Œuf : un œuf lumineux fissuré" loading="lazy" width="700" height="843"></div>
+        <div class="card-body">
+          <div><h3>L'Œuf — histoire de vie</h3><p>Motion design · 5 chapitres</p></div>
+          <button class="open" type="button" aria-label="Voir L'Œuf"><svg class="i"><use href="#i-arrow"/></svg></button>
+        </div>
+        <div class="detail" hidden>
+          <p class="meta">Motion design · 2026</p>
+          <h3>L'histoire</h3>
+          <p>« Un œuf peut se casser de deux façons. » Vidéo verticale de près de trois minutes en cinq chapitres, déclinée en cinq reels. Silhouettes en traits lumineux, accents rouges, voix off posée.</p>
+          <h3>La fabrication</h3>
+          <p>Écrite, mise en voix et <strong>animée entièrement en code</strong> : le script devient des scènes, les scènes deviennent des images, rendues automatiquement.</p>
+          <ul class="tags"><li>Écriture</li><li>Motion design</li><li>Python</li><li>Synthèse vocale</li><li>FFmpeg</li></ul>
+        </div>
+      </article>
 
-    <article class="card" id="p-veilleur" data-cat="video design" style="--c:#c8962e">
-      <div class="swatch"><span class="mono">N°09</span><span class="mono">Ocre Sankofa</span></div>
-      <figure class="shot tall night"><img src="assets/img/veilleur.webp" alt="Logo de la chaîne Le Veilleur : l'oiseau Sankofa ocre sur fond nuit" loading="lazy" width="700" height="700"></figure>
-      <div class="body">
-        <p class="meta mono">Chaîne vidéo · identité · 2026</p>
-        <h3>Le Veilleur</h3>
-        <p>Une chaîne qui interroge ce qu'on nous a appris à croire, vu depuis l'Afrique et parlé à toute la francophonie. Le logo reprend le symbole adinkra <strong>Sankofa</strong> : « retourne chercher ce que tu as laissé derrière toi ».</p>
-        <p>Ligne éditoriale, séries, charte visuelle et une chaîne de production en sept étapes par vidéo, de l'idée au montage.</p>
-        <ul class="tags"><li>Branding</li><li>Ligne éditoriale</li><li>Scénario</li><li>Montage</li></ul>
-      </div>
-    </article>
+      <article class="card" id="p-veilleur" data-cat="video design">
+        <div class="thumb fit night"><img src="assets/img/veilleur.webp" alt="Logo de la chaîne Le Veilleur : l'oiseau Sankofa" loading="lazy" width="700" height="700"></div>
+        <div class="card-body">
+          <div><h3>Le Veilleur</h3><p>Chaîne vidéo · identité</p></div>
+          <button class="open" type="button" aria-label="Voir Le Veilleur"><svg class="i"><use href="#i-arrow"/></svg></button>
+        </div>
+        <div class="detail" hidden>
+          <p class="meta">Chaîne vidéo · identité · 2026</p>
+          <h3>Le concept</h3>
+          <p>Une chaîne qui interroge ce qu'on nous a appris à croire, vu depuis l'Afrique et parlé à toute la francophonie. Le logo reprend le symbole adinkra <strong>Sankofa</strong> : « retourne chercher ce que tu as laissé derrière toi ».</p>
+          <h3>Le travail</h3>
+          <p>Ligne éditoriale, séries, charte visuelle et une chaîne de production en sept étapes par vidéo, de l'idée au montage.</p>
+          <ul class="tags"><li>Branding</li><li>Ligne éditoriale</li><li>Scénario</li><li>Montage</li></ul>
+        </div>
+      </article>
 
+    </div>
   </div>
 </section>
 
 <!-- ============ MÉTHODE ============ -->
 <section id="methode" class="section">
-  <header class="section-head">
-    <p class="mono kicker">Comment je travaille</p>
-    <h2>Méthode</h2>
-  </header>
-  <ol class="steps">
-    <li>
-      <h3>Comprendre le terrain</h3>
-      <p>Avant d'écrire du code, je fais l'inventaire de ce qui existe : fichiers, classeurs, habitudes du comptoir. Un outil qui ignore la réalité du terrain ne sera pas utilisé.</p>
-    </li>
-    <li>
-      <h3>Écrire la spécification</h3>
-      <p>Vision, utilisateurs, user stories, modèle de données, règles d'interface. Un document clair vaut mieux que dix allers-retours.</p>
-    </li>
-    <li>
-      <h3>Construire par petits lots</h3>
-      <p>Chaque lot est livrable seul, vérifié puis enregistré dans git. Si quelque chose casse, on sait exactement où revenir.</p>
-    </li>
-    <li>
-      <h3>Tester et sécuriser</h3>
-      <p>Tests automatisés, droits appliqués dans la base, aucun mot de passe ni clé dans le code publié. La sécurité n'est pas une option qu'on désactive pour aller plus vite.</p>
-    </li>
-    <li>
-      <h3>L'IA comme co-pilote</h3>
-      <p>Je travaille avec des agents de code (Claude Code, Antigravity, Cursor) : je décide, je relis, je vérifie. L'agent accélère, il ne remplace pas le jugement.</p>
-    </li>
-  </ol>
-</section>
-
-<!-- ============ COMPÉTENCES & PARCOURS ============ -->
-<section id="parcours" class="section split">
-  <div>
-    <header class="section-head">
-      <p class="mono kicker">Boîte à outils</p>
-      <h2>Compétences</h2>
+  <div class="wrap">
+    <header class="head center">
+      <p class="eyebrow">Comment je travaille</p>
+      <h2>Une méthode en 5 étapes</h2>
     </header>
-    <div class="skills">
-      <div>
-        <h3 class="mono">Développement</h3>
-        <p>HTML, CSS, JavaScript, TypeScript, React, Vite, Python, SQL / PostgreSQL, Supabase, PWA, tests (Vitest, Playwright), git</p>
-      </div>
-      <div>
-        <h3 class="mono">Design</h3>
-        <p>Identité visuelle, logo, charte graphique, design system, maquettes UI, documents d'entreprise, Figma</p>
-      </div>
-      <div>
-        <h3 class="mono">Vidéo</h3>
-        <p>Écriture de script, montage, motion design en code, voix off, pilotage de drone et prise de vue aérienne</p>
-      </div>
-      <div>
-        <h3 class="mono">Mise en ligne</h3>
-        <p>Vercel, GitHub, nom de domaine, référencement (SEO), automatisation de documents</p>
-      </div>
-    </div>
-  </div>
-  <div>
-    <header class="section-head">
-      <p class="mono kicker">Jusqu'ici</p>
-      <h2>Parcours</h2>
-    </header>
-    <ol class="timeline">
-      <li>
-        <p class="mono meta">2026</p>
-        <h3>Développeur & designer indépendant</h3>
-        <p>Outils sur mesure, sites et identités pour un showroom de peinture et revêtements, des artisans et des projets d'amis.</p>
-      </li>
-      <li>
-        <p class="mono meta">Avant</p>
-        <h3>Responsable communication</h3>
-        <p>Dans une entreprise événementielle : amélioration de la communication et d'une gestion plus efficace de l'entreprise. Design graphique et réalisation vidéo.</p>
-      </li>
-      <li>
-        <p class="mono meta">Formation</p>
-        <h3>Licence en informatique</h3>
-        <p>Développeur d'applications, option génie logiciel : développement web, gestion de projet, modélisation de données, intelligence artificielle.</p>
-      </li>
+    <ol class="steps">
+      <li><h3>Comprendre le terrain</h3><p>Inventaire de l'existant : fichiers, classeurs, habitudes du comptoir.</p></li>
+      <li><h3>Écrire la spécification</h3><p>Utilisateurs, besoins, données, écrans. Un document clair vaut dix allers-retours.</p></li>
+      <li><h3>Construire par petits lots</h3><p>Chaque lot est livrable seul, vérifié puis enregistré.</p></li>
+      <li><h3>Tester et sécuriser</h3><p>Tests automatisés, droits dans la base, aucune clé dans le code publié.</p></li>
+      <li><h3>Livrer et former</h3><p>Mise en ligne, guide d'utilisation et suivi après livraison.</p></li>
     </ol>
   </div>
 </section>
 
+<!-- ============ AVIS CLIENTS ============
+     Section masquée tant qu'il n'y a pas de vrais avis.
+     Pour l'afficher : remplacer les textes ci-dessous puis enlever l'attribut "hidden". -->
+<section id="avis" class="section soft" hidden>
+  <div class="wrap">
+    <header class="head center">
+      <p class="eyebrow">Ils m'ont fait confiance</p>
+      <h2>Avis clients</h2>
+    </header>
+    <div class="quotes">
+      <figure class="quote">
+        <blockquote>« Texte de l'avis à remplacer. »</blockquote>
+        <figcaption><strong>Nom</strong><span>Fonction, entreprise</span></figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote>« Texte de l'avis à remplacer. »</blockquote>
+        <figcaption><strong>Nom</strong><span>Fonction, entreprise</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CONTACT ============ -->
-<section id="contact" class="section contact">
-  <p class="mono kicker">Un projet, une idée, une teinte à fabriquer ?</p>
-  <h2>Parlons-en.</h2>
-  <div class="cta">
-    <a class="btn" href="https://www.linkedin.com/in/yapi-mony-joel-marcel" target="_blank" rel="noopener">LinkedIn ↗</a>
-    <a class="btn ghost" href="https://github.com/Blackout67" target="_blank" rel="noopener">GitHub ↗</a>
+<section id="contact" class="section">
+  <div class="wrap">
+    <div class="cta-band">
+      <div class="cta-text">
+        <p class="eyebrow light">Parlons-en</p>
+        <h2>Un projet en tête ?</h2>
+        <p>Un site, une application, un logo ou une vidéo : décrivez-moi votre besoin, je vous réponds rapidement avec une proposition claire.</p>
+        <div class="cta">
+          <a class="btn" href="#" data-contact="whatsapp" target="_blank" rel="noopener">WhatsApp <svg class="i"><use href="#i-whatsapp"/></svg></a>
+          <a class="btn btn-light" href="#" data-contact="email">E-mail <svg class="i"><use href="#i-mail"/></svg></a>
+          <a class="btn btn-light" href="https://www.linkedin.com/in/yapi-mony-joel-marcel" target="_blank" rel="noopener">LinkedIn <svg class="i"><use href="#i-linkedin"/></svg></a>
+        </div>
+      </div>
+      <form class="form" data-contact="form">
+        <label>Votre nom<input name="nom" required autocomplete="name"></label>
+        <label>Type de projet
+          <select name="type">
+            <option>Site web</option>
+            <option>Application de gestion</option>
+            <option>Automatisation</option>
+            <option>Identité visuelle</option>
+            <option>Vidéo / motion design</option>
+            <option>Prise de vue par drone</option>
+            <option>Autre</option>
+          </select>
+        </label>
+        <label>Votre message<textarea name="message" rows="4" required></textarea></label>
+        <button class="btn" type="submit">Envoyer sur WhatsApp <svg class="i"><use href="#i-arrow"/></svg></button>
+      </form>
+    </div>
   </div>
 </section>
 
 </main>
 
 <footer class="foot">
-  <p class="mono">© 2026 Joel Yapi · Abidjan</p>
-  <p class="mono muted">Site fait main, sans framework. <a href="https://github.com/Blackout67/Portfolio-HTML">Code source</a></p>
+  <div class="wrap foot-row">
+    <a class="brand" href="#accueil" aria-label="Joel Yapi, accueil">
+      <span class="logo" aria-hidden="true">J<b>Y</b></span>
+      <span class="brand-text"><strong>Joel Yapi</strong><small>Développeur & designer</small></span>
+    </a>
+    <nav aria-label="Pied de page">
+      <a href="#services">Services</a>
+      <a href="#projets">Projets</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <ul class="socials">
+      <li><a href="https://www.linkedin.com/in/yapi-mony-joel-marcel" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="i"><use href="#i-linkedin"/></svg></a></li>
+      <li><a href="https://github.com/Blackout67" target="_blank" rel="noopener" aria-label="GitHub"><svg class="i"><use href="#i-github"/></svg></a></li>
+      <li data-contact="whatsapp"><a href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="i"><use href="#i-whatsapp"/></svg></a></li>
+    </ul>
+  </div>
+  <div class="wrap foot-legal">
+    <p>© 2026 Joel Yapi · Abidjan, Côte d'Ivoire</p>
+    <p>Site fait main, sans framework · <a href="https://github.com/Blackout67/Portfolio-HTML" target="_blank" rel="noopener">Code source</a></p>
+  </div>
 </footer>
+
+<!-- Fiche détaillée d'un projet, remplie par script.js -->
+<dialog class="modal" aria-labelledby="modal-title">
+  <button class="modal-close" type="button" aria-label="Fermer"><svg class="i"><use href="#i-close"/></svg></button>
+  <div class="modal-media"></div>
+  <div class="modal-body">
+    <h2 id="modal-title"></h2>
+    <div class="modal-content"></div>
+  </div>
+</dialog>
 
 <script src="script.js"></script>
 </body>
