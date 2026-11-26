@@ -240,8 +240,9 @@ p { margin: 0 0 .9em; }
 
 .timeline {
   list-style: none; padding: 0; margin: clamp(56px, 8vw, 90px) 0 0;
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
 }
+.timeline li.now { border-color: var(--red); box-shadow: 0 0 0 1px var(--red) inset; }
 .timeline li { border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; position: relative; }
 .when {
   display: inline-block; font-size: .74rem; font-weight: 700; color: var(--red);
@@ -444,7 +445,7 @@ p { margin: 0 0 .9em; }
   .scroll { display: none; }
   .services { grid-template-columns: repeat(2, 1fr); }
   .split, .about { grid-template-columns: 1fr; }
-  .grid { grid-template-columns: repeat(2, 1fr); }
+  .grid, .timeline { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: repeat(3, 1fr); row-gap: 36px; }
   .steps::before { display: none; }
   .cta-band { grid-template-columns: 1fr; }
