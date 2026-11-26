@@ -2,7 +2,7 @@
 
 Développeur web et designer graphique, Abidjan.
 
-Une page unique, fond blanc et accent rouge : accueil avec photo, services, compétences, à propos et parcours, neuf projets avec fiche détaillée, méthode et contact (WhatsApp, e-mail, formulaire qui prépare le message).
+Une page unique, fond blanc et accent rouge : accueil avec photo, services, compétences, à propos et parcours, huit projets avec fiche détaillée, méthode et contact (WhatsApp, e-mail, formulaire qui prépare le message).
 
 ## Contenu
 
